@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Routes from './app/routes'
+import {Provider} from 'react-redux'
+import store from './app/store/configureStore'
+import {hashHistory, browserHistory} from 'react-router'
+import {syncHistoryWithStore} from 'react-router-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const history = syncHistoryWithStore(hashHistory, store);
+
+const routes = {
+  path: '/',
+  indexRoute: { onEnter: (nextState, replace) => replace('/home') },
+  childRoutes: [
+    require('./app/routes/karnova/login').default,
+    require('./app/routes/karnova/home').default,
+    require('./app/routes/karnova/search').default,
+  ]
+};
+
+class App extends React.Component{
+  render(){
+    return(
+      <Provider store={store}>
+        <Routes
+          history={history}
+          routes={routes}
+        />
+      </Provider>
+    )
+  }
+
 }
 
 export default App;
