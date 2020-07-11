@@ -378,7 +378,6 @@ html > body.menu-on-top #main {
 }
 
 .search-box {
-    margin-top: 20px;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 4px;
     padding: 20px;
@@ -439,9 +438,10 @@ html > body.menu-on-top #main {
 
 .person {
     margin-top: 15px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
     height: 120px;
     align-items: center;
+
 }
 
 .image-avatar {
@@ -470,7 +470,8 @@ html > body.menu-on-top #main {
 }
 
 .particleJsDiv{
-
+    width: 120%;
+    transform: translate(8%, 0);
 }
 
 .platform_title_div{
@@ -482,4 +483,29 @@ html > body.menu-on-top #main {
     text-align: center;
     font-size: 40px;
     margin: 10px 0;
+}
+
+.searchboxBtn{
+    display: flex;
+    align-items: center;
+}
+.search-btn-div{
+    margin: 0 auto;
+}
+
+.searchBtn{
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.absolutePos{
+    position: absolute;
+}
+
+.homeSearch{
+    transform: translate(0, -40%);
+}
+
+.PersonList{
+    list-style-type: none;
 }

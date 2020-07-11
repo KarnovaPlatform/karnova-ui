@@ -4,7 +4,7 @@ import Person from '../../../../components/person/person'
 class PersonList extends Component {
   render () {
     return (
-      <ul>
+      <div className="PersonList">
         <li>
           <Person name={'علی'} family={'ابراهیمی'} image={undefined} skill={'php'} location={'تهران'}
                   year={'۳ سال و ۹ ماه'}/>
@@ -25,7 +25,7 @@ class PersonList extends Component {
           <Person name={'علی'} family={'ابراهیمی'} image={undefined} skill={'php'} location={'تهران'}
                   year={'۳ سال و ۹ ماه'}/>
         </li>
-      </ul>
+      </div>
     )
   }
 }

@@ -7,7 +7,7 @@ class Search extends Component {
     return (
       <div className="container">
         <SearchBox/>
-        {/*<PersonList/>*/}
+        <PersonList/>
       </div>
     )
   }

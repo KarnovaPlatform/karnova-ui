@@ -4,7 +4,7 @@ import History from './History'
 class SearchBox extends Component {
   render () {
     return (
-      <div className="search-box">
+      <div className={"search-box " + this.props.className}>
         <div className="row">
           <div className="col-xl-4 col-lg-4 col-md-3 searchField">
             <input className="input" type={'text'} placeholder={app.translate('دسته بندی')}/>
@@ -23,11 +23,10 @@ class SearchBox extends Component {
           <div className="col-xl-6 col-lg-6">
             <History/>
           </div>
-          <div className="col-xl-3 col-lg-3">
-            <div >
-
+          <div className="col-x6-3 col-lg-6 searchboxBtn">
+            <div className="search-btn-div " >
+              <button className="btn-default searchBtn">{app.translate('جستجو')}</button>
             </div>
-            <button>{app.translate('جستجو')}</button>
           </div>
         </div>
       </div>
