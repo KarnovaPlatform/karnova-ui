@@ -77,5 +77,14 @@
   "login.register.confirm_password_field.title": "کلمه عبور انتخابی خود را دوباره وارد کنید",
   "login.confirm_password": "تکرار کلمه عبور",
 
+  "search_box.category": "دسته بندی",
+  "search_box.skill": "مهارت",
+  "search_box.location": "موقعیت",
+  "search_box.search": "جستجو",
+
+  "history.duration": "حداقل سابقه کار در یک شرکت :",
+  "history.month": "ماه",
+  "history.year": "سال",
+
   "end": "end"
 }
