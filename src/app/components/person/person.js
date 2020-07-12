@@ -9,7 +9,7 @@ class Person extends Component {
     return (
       <div className="row person mx-0">
         <div className="col-xl-1 col-lg-3 col-md-3 ">
-          <img className="image-avatar" src={image}/>
+          <img className="image-avatar" src={image} onClick={()=>{this.props.onClick(id)}} />
         </div>
 
         <div className="col-xl-9 col-lg-6 col-md-6 text-right">

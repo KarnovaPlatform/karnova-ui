@@ -14,6 +14,7 @@ const routes = {
     require('./app/routes/karnova/login').default,
     require('./app/routes/karnova/home').default,
     require('./app/routes/karnova/search').default,
+    require('./app/routes/karnova/person').default,
   ]
 };
 

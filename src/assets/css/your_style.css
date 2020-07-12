@@ -445,6 +445,7 @@ html > body.menu-on-top #main {
 }
 
 .image-avatar {
+    cursor: pointer;
     width: 70px;
     height: 70px;
     float: right;
