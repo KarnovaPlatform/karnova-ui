@@ -9,7 +9,7 @@ export default class Home extends React.Component {
     return (
       <div id="content" className="container">
         <Statistics/>
-        <SearchBox className={" homeSearch"}/>
+        <SearchBox router={this.props.router} className={" homeSearch"}/>
         <StackLineChart/>
         <Wordcloud/>
       </div>)

@@ -6,7 +6,7 @@ class History extends Component {
       <div className="row pt-3">
         <div className="col-xl-6 col-lg-6 col-md-6 time-label ">
           <div className=" ">
-            <label className="col-xl-12 col-lg-12 col-md-12" >{app.translate('حداقل سابقه کار در یک شرکت :')}</label>
+            <label className="col-xl-12 col-lg-12 col-md-12" >{app.translate('history.duration')}</label>
           </div>
         </div>
         <div className={"col-xl-6 col-lg-6 col-md-6 "}>
@@ -17,7 +17,7 @@ class History extends Component {
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="row mx-0 field-number">
 
-                  <label className="col-xl-4 col-lg-5 col-md-6 p-0 m-0 text-center"> {app.translate('ماه')} </label>
+                  <label className="col-xl-4 col-lg-5 col-md-6 p-0 m-0 text-center"> {app.translate('history.month')} </label>
 
                   <div className={"col-xl-8 col-lg-7 col-md-6 p-0 m-0"}>
                     <input type={'number'} className={'input-number'}/>
@@ -28,7 +28,7 @@ class History extends Component {
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="row mx-0 field-number">
 
-                  <label className="col-xl-4 col-lg-5 col-md-6 p-0 m-0 text-center"> {app.translate('سال')} </label>
+                  <label className="col-xl-4 col-lg-5 col-md-6 p-0 m-0 text-center"> {app.translate('history.year')} </label>
 
                   <div className={"col-xl-8 col-lg-7 col-md-6  p-0 m-0"}>
                     <input type={'number'} className='input-number' />

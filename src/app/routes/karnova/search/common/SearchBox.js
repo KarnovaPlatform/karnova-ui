@@ -7,15 +7,15 @@ class SearchBox extends Component {
       <div className={"search-box " + this.props.className}>
         <div className="row">
           <div className="col-xl-4 col-lg-4 col-md-3 searchField">
-            <input className="input" type={'text'} placeholder={app.translate('دسته بندی')}/>
+            <input className="input" type={'text'} placeholder={app.translate('search_box.category')}/>
           </div>
 
           <div className="col-xl-4 col-lg-4 col-md-3 searchField">
-            <input className="input" type={'text'} placeholder={app.translate('مهارت')}/>
+            <input className="input" type={'text'} placeholder={app.translate('search_box.skill')}/>
           </div>
 
           <div className="col-xl-4 col-lg-4 col-md-3 searchField">
-            <input className="input" type={'text'} placeholder={app.translate('موقعیت')}/>
+            <input className="input" type={'text'} placeholder={app.translate('search_box.location')}/>
           </div>
 
         </div>
@@ -25,7 +25,7 @@ class SearchBox extends Component {
           </div>
           <div className="col-x6-3 col-lg-6 searchboxBtn">
             <div className="search-btn-div " >
-              <button className="btn-default searchBtn">{app.translate('جستجو')}</button>
+              <button onClick={()=>{this.props.onClick ? this.props.onClick():{}}} className="btn-default searchBtn">{app.translate('search_box.search')}</button>
             </div>
           </div>
         </div>
