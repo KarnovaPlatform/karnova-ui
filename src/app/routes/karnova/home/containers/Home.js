@@ -9,7 +9,7 @@ export default class Home extends React.Component {
     return (
       <div id="content" className="container">
         <Statistics/>
-        <SearchBox router={this.props.router} className={" homeSearch"}/>
+        <SearchBox onClick={()=>{this.props.router.push("search")}} className={" homeSearch"}/>
         <StackLineChart/>
         <Wordcloud/>
       </div>)
