@@ -7,9 +7,10 @@ export default class Header extends React.Component {
     return (
       <header className="myheader">
         <div  className="container">
-          <div className=" list-inline p-0 m-0">
+          <div className="row list-inline p-0 m-0">
             <HeaderBtn label={'header.home'}/>
             <HeaderBtn label={'header.services'}/>
+            <HeaderBtn label={'header.about_us'}/>
           </div>
         </div>
 
