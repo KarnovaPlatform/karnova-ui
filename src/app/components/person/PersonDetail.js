@@ -32,7 +32,7 @@ class PersonDetail extends Component {
     return (
       <div>
         <div className="row">
-          <Bio fullname={profile.fullname}  headline={profile.headline}  profile_image={profile.profile_image} summery={profile.summery}/>
+          <Bio id={data._id} fullname={profile.fullname}  headline={profile.headline}  profile_image={profile.profile_image} summery={profile.summery} location={profile.location}/>
         </div>
       </div>
     )

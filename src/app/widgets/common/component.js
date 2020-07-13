@@ -1,8 +1,11 @@
 import React, {Component} from 'react'
 import personComponent from './../../routes/karnova/person/component'
+import searchComponent from './../../routes/karnova/search/component'
+
 
 const components = {
-...personComponent
+...personComponent,
+...searchComponent
 }
 
 export default (componentKey = undefined, componentVersion = 'v1') => {

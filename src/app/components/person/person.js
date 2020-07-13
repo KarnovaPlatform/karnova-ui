@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 
 import { PieChart } from 'react-minimal-pie-chart'
+import avatar from '../../../assets/img/userAvatar.png'
 
 class Person extends Component {
 
   render () {
-    let { name, family, id, image, skill, location, year } = this.props
+    let { name, family, id, image, skill, location, year , linkedinUrl } = this.props
     return (
       <div className="row person mx-0">
         <div className="col-xl-1 col-lg-3 col-md-3 ">
-          <img className="image-avatar" src={image} onClick={()=>{this.props.onClick(id)}} />
+          <img className="image-avatar" src={avatar}  onClick={()=>{this.props.onClick(id)}} />
         </div>
 
         <div className="col-xl-9 col-lg-6 col-md-6 text-right">
@@ -20,9 +21,10 @@ class Person extends Component {
 
             <div className="col-12">
               <div className="row details">
-                <p className="col-xl-3 col-lg-3 col-md-3">{'مهارت :' + skill} </p>
-                <p className="col-xl-3 col-lg-3 col-md-3">{' محل زندگی :' + location}</p>
-                <p className="col-xl-3 col-lg-3 col-md-3">{' سابقه :' + year} </p>
+                <p className="col-xl-3 col-lg-3 col-md-3">{'عنوان : ' + skill} </p>
+                <p className="col-xl-3 col-lg-3 col-md-3">{' محل زندگی : ' + location}</p>
+                <p className="col-xl-3 col-lg-3 col-md-3">{' سابقه : ' + year} </p>
+                {linkedinUrl && <a href={linkedinUrl} >{app.translate('پروفایل لینکدین')}</a>}
               </div>
             </div>
           </div>

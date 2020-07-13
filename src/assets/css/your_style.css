@@ -391,6 +391,7 @@ html > body.menu-on-top #main {
 }
 
 .input {
+    text-align: left;
     width: 100%;
     padding: 5px 10px 5px 5px;
     border-radius: 7px;
@@ -460,11 +461,6 @@ html > body.menu-on-top #main {
     padding: 15px;
 }
 
-.time-label {
-    display: flex;
-    align-items: center;
-    text-align: right;
-}
 
 .piechart {
     height: 70%;
@@ -514,4 +510,9 @@ html > body.menu-on-top #main {
 
 .PersonList{
     list-style-type: none;
+}
+
+.educationCheckBoxDiv {
+    align-items: center;
+    display: flex;
 }

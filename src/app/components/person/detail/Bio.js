@@ -7,10 +7,10 @@ class Bio extends Component {
 
 
   render () {
-    let {fullname , profile_image , headline , summery } = this.props;
+    let { id , fullname , profile_image , headline , summery , location } = this.props;
     return (
-      <Person id={'C6RpjW0Bi61scmLRKvCO'} name={fullname} family={''} image={avatar} skill={headline} location={''} onClick={(id)=>{}}
-              year={''}/>
+      <Person id={id} name={fullname} family={''} image={avatar} skill={headline} location={location} onClick={(id)=>{}}
+              year={'تنظیم نشده است'}/>
     )
   }
 }
