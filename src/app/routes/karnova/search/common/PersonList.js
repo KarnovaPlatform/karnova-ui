@@ -11,6 +11,7 @@ class PersonList extends Component {
   render () {
 
     let persons = this.props.data
+    let  meta  = this.props.meta.pagination;
     let arr = []
     persons.map((person, index) => {
       let profile = person.profile_info
@@ -33,12 +34,21 @@ class PersonList extends Component {
     })
     return (
       <div className="PersonList">
-        {arr &&
+        <div className="row">
+          <label className="finedCount" >{app.translate('تعداد افراد یافته شده : ')}{meta.total} {app.translate(' نفر ')}</label>
+        </div>
+        {arr && arr.length>0 &&
         <div>
           {
             arr.map((person) => {return person})
           }
-          <Pagination onChange={(param)=>{this.changePagination(param)}}/>
+          <Pagination onChange={(param)=>{this.changePagination(param)}}
+                      current_page={meta.current_page}
+                      limit={meta.limit}
+                      total_pages={meta.total_pages}
+                      next={meta.next}
+                      prev={meta.prev}
+          />
         </div>
         }
         {arr.length === 0 &&

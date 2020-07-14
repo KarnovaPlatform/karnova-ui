@@ -21,18 +21,18 @@ class Person extends Component {
 
             <div className="col-12">
               <div className="row details">
-                <p className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
+                <div className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
                   <p className="headlineLabel">{app.translate('عنوان : ')}</p>
                   <p>{skill.length> 50 ? '...' +skill.substr(0 , 50) : skill}</p>
-                </p>
-                <p className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
                   <p className="locationLabel">{app.translate(' محل زندگی : ')}</p>
                   {location.length> 17 ? '...' +location.substr(0 , 17) : location}
-                </p>
-                <p className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
                   <p className="historyLabel">{app.translate(' سابقه : ')}</p>
                   {' ' + year}
-                </p>
+                </div>
 
                 {linkedinUrl && <a href={linkedinUrl} >{app.translate('پروفایل لینکدین')}</a>}
               </div>

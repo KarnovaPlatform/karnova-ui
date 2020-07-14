@@ -1,101 +1,103 @@
 import React, { Component } from 'react'
 
+
 class Pagination extends Component {
   constructor (props) {
     super(props)
-    // let {}
+    let {total_pages , current_page , limit , prev , next } = this.props;
     this.state = {
-      pageOptions: [],
-      pageCount: 0,
-      pageIndex: 0,
-      pageSize: 10
+      total_pages: total_pages || 0,
+      next:next ,
+      prev: prev,
+      current_page: current_page || 0,
+      limit: limit || 10,
     }
   }
 
   setPageSize = (size) => {
-    this.setState({ pageSize: size })
+    this.props.onChange(
+      {
+        limit: size,
+        page: this.state.current_page
+      }
+    );
   }
 
   nextPage = () => {
-    this.setState({ pageIndex: this.state.pageIndex + 1 }, () => {
       this.props.onChange(
         {
-          limit: this.state.pageSize,
-          page: this.state.pageIndex
+          page: this.state.next,
+          limit: this.state.limit,
         }
       );
-    })
   }
 
   previousPage = () => {
-    this.setState({ pageIndex: this.state.pageIndex - 1 })
-  }
-
-  gotoPage = (index) => {
-    this.setState({ pageIndex: index })
+    this.props.onChange(
+      {
+        page: this.state.prev,
+        limit: this.state.limit,
+      }
+    );
   }
 
   canPreviousPage = () => {
-    return false
+    return this.props.prev !== null
   }
   canNextPage = () => {
-    return false
+    return this.props.next !== null
+  }
+
+
+
+  componentWillReceiveProps (nextProps, nextContext) {
+    if(!app._.isEqual(nextProps , this.props))
+    {
+      let {total_pages , current_page , limit , prev , next } = nextProps;
+      this.setState({
+        total_pages: total_pages || 0,
+        next:next ,
+        prev: prev,
+        current_page: current_page || 0,
+        limit: limit || 10,
+      })
+    }
   }
 
   render () {
-    const { pageOptions, pageSize, pageIndex } = this.state
-    const { canPreviousPage, canNextPage, gotoPage, nextPage, previousPage, setPageSize } = this
+    const {  limit, current_page , total_pages } = this.state
+    const { canPreviousPage, canNextPage, nextPage, previousPage, setPageSize } = this
 
     return (
       <div className="row mypagination">
 
         <div className="col-xl-6 col-lg-6 col-md-6 ">
           <div className="row mx-0">
-            <button className="paginationBtn" onClick={() => gotoPage(pageIndex - 4)} disabled={!canPreviousPage}>
-              <i style={{ padding: '5px 5px' }} className="fa fa-forward" aria-hidden="true"/>
-            </button>
-            {' '}
-            <button className="paginationBtn" onClick={() => previousPage()} disabled={!canPreviousPage}>
+            <button className="paginationBtn"  onClick={() => previousPage()} disabled={!canPreviousPage}>
               <i style={{ padding: '5px 5px' }} className="fa fa-chevron-right" aria-hidden="true"/>
             </button>
+            {' '}
+            <strong>{' '} صفحه{' '}<u>{current_page }</u>{' '} از{' '}<u>{total_pages}</u></strong>
             {' '}
             <button className="paginationBtn" onClick={() => nextPage()} disabled={!canNextPage}>
               <i style={{ padding: '5px 5px' }} className="fa fa-chevron-left" aria-hidden="true"/>
             </button>
-            {' '}
-            <button className="paginationBtn" onClick={() => gotoPage(pageIndex + 4)} disabled={!canNextPage}>
-              <i style={{ padding: '5px 5px' }} className="fa fa-backward" aria-hidden="true"/>
-            </button>
-            {' '}
             <span className="paginationText ml-2">
-          <strong>{' '} صفحه{' '}<u>{pageIndex + 1}</u>{' '} از{' '}<u>{pageOptions.length}</u></strong>
         </span>
           </div>
         </div>
 
         <div className="col-xl-6 col-lg-6 col-md-6 ">
           <div className="paginationLeft">
-           <span className="paginationText">
-           برو به صفحه :{' '}
-             <input
-               type="number"
-               className="pageIndexInput"
-               defaultValue={pageIndex + 1}
-               onChange={e => {
-                 const page = e.target.value ? Number(e.target.value) - 1 : 0
-                 gotoPage(page)
-               }}
-             />
-        </span>{' '}
             <select
-              value={pageSize}
+              value={limit}
               onChange={e => {
                 setPageSize(Number(e.target.value))
               }}
             >
-              {[5, 10, 15, 20, 25].map(pageSize => (
-                <option key={pageSize} value={pageSize}>
-                  تایی {pageSize}
+              {[5, 10, 15, 20, 25].map(limit => (
+                <option key={limit} value={limit}>
+                  تایی {limit}
                 </option>
               ))}
             </select>
