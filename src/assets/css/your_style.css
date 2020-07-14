@@ -461,6 +461,24 @@ html > body.menu-on-top #main {
     padding: 15px;
 }
 
+.headlineLabel{
+    color:green;
+    padding-left: 2px;
+}
+
+.locationLabel{
+    color:red;
+    padding-left: 2px;
+}
+
+.historyLabel{
+    color:blue;
+    padding-left: 2px;
+}
+
+.flexDisplay{
+    display: flex;
+}
 
 .piechart {
     height: 70%;
@@ -515,4 +533,55 @@ html > body.menu-on-top #main {
 .educationCheckBoxDiv {
     align-items: center;
     display: flex;
+}
+
+.notFountPerson{
+    height:400px;
+    margin-top: 20px;
+    box-shadow: 0 0 4px rgba( 0 , 0 , 0, 0.4);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.notFountText{
+    margin: 0 auto;
+    color: red;
+}
+
+.MuiTableContainer-root table tr td,.MuiTableContainer-root table tr th, .MuiToolbar-root h6{
+    font-family: 'vazir', serif ;
+}
+
+.mypagination{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.paginationText{
+    align-items: center;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.paginationBtn{
+    margin-left: 3px;
+}
+
+.pageIndexInput{
+    width:50px;
+    text-align: center;
+    margin:2px;
+    height: 30px;
+}
+
+.tableWrap{
+    margin:auto;
+}
+
+.paginationLeft{
+    left:0;
+    position:absolute;
+    margin-left: 30px;
+    padding-left: 1rem;
 }

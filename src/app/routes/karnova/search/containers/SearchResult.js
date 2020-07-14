@@ -50,6 +50,15 @@ class SearchResult extends Component {
     });
   }
 
+  changePagination=(params)=>{
+    this.setState({loading: true}, () => {
+      this.props.getData(params ,{} ,
+          this.setState({loading: false} )
+      );
+    });
+
+  }
+
   render () {
     if(this.state.loading)
       return <div>loading...</div>
@@ -66,7 +75,7 @@ class SearchResult extends Component {
                    educationRelated={searchParams.educationRelated}
                    onClick={(params)=>{this.reload(params)}}
         />
-        <PersonList data={data} router={this.props.router} />
+        <PersonList data={data ? data : []} changePagination={(params)=>{this.changePagination(params)}} router={this.props.router} />
       </div>
     )
   }
