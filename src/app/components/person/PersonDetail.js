@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Bio from './detail/Bio'
+import TableV2 from '../table/TableV2'
 
 class PersonDetail extends Component {
 
@@ -33,6 +34,7 @@ class PersonDetail extends Component {
       <div>
         <div className="row">
           <Bio id={data._id} fullname={profile.fullname}  headline={profile.headline}  profile_image={profile.profile_image} summery={profile.summery} location={profile.location}/>
+          {/*<TableV2 data={[]}/>*/}
         </div>
       </div>
     )
