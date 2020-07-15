@@ -391,7 +391,7 @@ html > body.menu-on-top #main {
 }
 
 .input {
-    text-align: left;
+    text-align: right;
     width: 100%;
     padding: 5px 10px 5px 5px;
     border-radius: 7px;
@@ -400,6 +400,17 @@ html > body.menu-on-top #main {
     border-color: rgba(0, 0, 0, 0.2);
     border-image: initial;
     outline: none;
+}
+
+.input-label{
+    float: right;
+}
+
+.search-label{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 .time-label {

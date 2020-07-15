@@ -56,8 +56,14 @@ class SearchBox extends Component {
         <form onSubmit={() => {this.props.onClick ? this.props.onClick(this.state) : {}}}>
           <div className="row">
             <div className="col-xl-4 col-lg-4 col-md-3 searchField">
-              <input className="input" value={category} onChange={(e) => {this.setCategory(e.target.value)}}
-                     type={'text'} placeholder={app.translate('search_box.category')}/>
+              {/*<input className="input" value={category} onChange={(e) => {this.setCategory(e.target.value)}}*/}
+              {/*       type={'text'} placeholder={app.translate('search_box.category')}/>*/}
+              <div className="">
+                <label htmlFor="input" className="control-label input-label">{app.translate('دسته بندی : ')}</label>
+                <input className="input" type="text" name="username" required="required" title={app.translate('login.username_field.title')}
+                         onChange={(e) => this.updateUsername(e)}/>
+                <i className="bar"/>
+              </div>
             </div>
 
             <div className="col-xl-4 col-lg-4 col-md-3 searchField">

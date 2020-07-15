@@ -80,6 +80,7 @@ class SearchResult extends Component {
     let { searchParams } = this.props
     return (
       <div className="container">
+        <label className="search-label">{app.translate("افراد توانمند در حوزه کسب و کار خود را پیدا کنید ")}</label>
         <SearchBox className={' mt-3'}
                    category={searchParams.category}
                    skill={searchParams.skill}
