@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "name": "karnova",
+  "description": "karnofa app",
+  "default_locale": "fa",
+  "version": "0.00.0",
+  "date": "2020-07-07 10:00:00"
+}
