@@ -732,3 +732,44 @@ input[type=submit] {
     background-color: DodgerBlue !important;
     color: #ffffff;
 }
+
+.top-users{
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 4px;
+}
+.tabs-div{
+    padding-top: 20px;
+}
+
+.table{
+    padding-top:20px;
+    direction: rtl;
+}
+
+.table-title{
+    text-align: right;
+}
+
+.table-head{
+    background: #2c699d;
+    color:white;
+}
+
+.post-index-column{
+    min-width: 20px;
+    max-width: 30px;
+}
+
+.post-text-column{
+    min-width: 200px;
+    max-width: 500px;
+    overflow-scrolling: revert;
+}
+.post-title-column{
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.post_image{
+    width: 75px;
+    height: 40px;
+}

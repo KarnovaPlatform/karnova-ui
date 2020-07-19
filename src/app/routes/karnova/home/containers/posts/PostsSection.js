@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Widget from '../../../../../widgets/Widget'
 
-class TopUsersSection extends Component {
+class PostsSection extends Component {
   render () {
     let lang = 'fa'
     return (
-      <div className="top-users">
+      <div>
         <Widget
-          componentKey={`linkedin.${lang}.person.profile.topUsers`}
+          componentKey={`linkedin.${lang}.person.profile.posts`}
           componentDependencies={{
             size:10
           }}
@@ -17,4 +17,4 @@ class TopUsersSection extends Component {
   }
 }
 
-export default TopUsersSection
+export default PostsSection

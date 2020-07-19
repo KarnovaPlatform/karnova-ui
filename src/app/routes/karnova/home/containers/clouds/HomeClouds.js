@@ -7,7 +7,7 @@ class HomeClouds extends Component {
   render () {
     let lang = 'fa'
     return (
-      <div className="pt-3">
+      <div className="tabs-div">
         <CustomTabs tabs={[
           {
             label:'home.cloud.tab.interests',

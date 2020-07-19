@@ -250,8 +250,8 @@ function TableV2(props) {
 
   return (
     <Styles >
-      {/*<h6 className="pl-2 pb-3 mb-2"> برترین پست ها در شبکه های اجتماعی</h6>*/}
-      <Table columns={columns} data={props.data} />
+      <h6 className="table-title pl-2 pb-3 mb-2"> برترین پست ها</h6>
+      {/*<Table columns={columns} data={props.data} />*/}
     </Styles>
   )
 }

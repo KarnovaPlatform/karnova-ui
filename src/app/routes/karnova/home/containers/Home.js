@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { addSearchParams } from '../Module'
 import HomeClouds from './clouds/HomeClouds'
 import TopUsersSection from './topPersons/TopUsersSection'
+import PostsSection from './posts/PostsSection'
 
 class Home extends React.Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class Home extends React.Component {
         <SearchBox onClick={(params)=>{ this.onSearchClick(params) }} className={" homeSearch"}/>
         <TopUsersSection/>
         <HomeClouds/>
+        <PostsSection/>
       </div>)
   }
 }

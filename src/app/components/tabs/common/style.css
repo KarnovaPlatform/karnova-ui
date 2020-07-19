@@ -27,9 +27,18 @@
     padding:10px;
 }
 
+.tab-item:active{
+    outline: none;
+}
+
 .active-tab{
     color:black;
     background: white;
+    outline: none;
+}
+
+.active-tab:focus{
+    outline: none;
 }
 
 .tab-panel {
