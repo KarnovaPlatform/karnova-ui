@@ -1,10 +1,10 @@
 import React from 'react'
 import Statistics from './statistics/Statistics'
 import SearchBox from '../../search/common/SearchBox'
-import StackLineChart from './topPersons/StackLineChart'
 import { connect } from 'react-redux'
 import { addSearchParams } from '../Module'
 import HomeClouds from './clouds/HomeClouds'
+import TopUsersSection from './topPersons/TopUsersSection'
 
 class Home extends React.Component {
   constructor (props) {
@@ -22,7 +22,7 @@ class Home extends React.Component {
       <div id="content" className="container">
         <Statistics/>
         <SearchBox onClick={(params)=>{ this.onSearchClick(params) }} className={" homeSearch"}/>
-        <StackLineChart/>
+        <TopUsersSection/>
         <HomeClouds/>
       </div>)
   }

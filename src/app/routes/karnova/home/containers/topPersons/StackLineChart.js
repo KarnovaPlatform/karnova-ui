@@ -28,6 +28,7 @@ class StackLineChart extends React.Component {
 
   render () {
 
+    // let options = Object.assign( {} , this._renderOptions(data) , {credits: { enabled: false}},)
     let options = Object.assign( {} , this._renderOptions(data) , {credits: { enabled: false}},)
 
     return (
