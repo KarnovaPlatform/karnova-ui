@@ -2,9 +2,9 @@ import React from 'react'
 import Statistics from './statistics/Statistics'
 import SearchBox from '../../search/common/SearchBox'
 import StackLineChart from './topPersons/StackLineChart'
-import Wordcloud from '../../../../components/wordcloud/wordcloud'
 import { connect } from 'react-redux'
 import { addSearchParams } from '../Module'
+import HomeClouds from './clouds/HomeClouds'
 
 class Home extends React.Component {
   constructor (props) {
@@ -23,7 +23,7 @@ class Home extends React.Component {
         <Statistics/>
         <SearchBox onClick={(params)=>{ this.onSearchClick(params) }} className={" homeSearch"}/>
         <StackLineChart/>
-        <Wordcloud/>
+        <HomeClouds/>
       </div>)
   }
 }

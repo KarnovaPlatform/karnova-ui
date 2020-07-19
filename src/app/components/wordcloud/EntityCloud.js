@@ -1,20 +1,19 @@
 import React from 'react'
 
 import WordCloudV3 from './WordCloudV3/WordCloudV3'
-import listData from './WordCloudV3/demo/demoData'
+// import listData from './WordCloudV3/demo/demoData'
 
 
 class EntityCloud extends React.Component {
 
   render () {
-    let {labelKey , valueKey} = this.props;
+    let {labelKey , valueKey , cloud} = this.props;
 
     return (
       <div className="wordcloud">
-
         <WordCloudV3
           style={{ letterSpacing: 0 }}             // set custom style to wordcloud div
-          data={listData}                           // array of word ( each array index is an object  includes text and value , ...) default : []
+          data={cloud}                           // array of word ( each array index is an object  includes text and value , ...) default : []
           urlKey={'text'}                       // suffix of url , default: undefined
           baseUrl={'#/jj'}                      // base of url that need for new search , default: undefined
           target={'_blank'}                     // 'this' for this window , new for new tab , default:''   should be : _blank _self _parent _top

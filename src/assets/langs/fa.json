@@ -61,6 +61,10 @@
   "home.containers.table.remove.content": "آیا میخواهید این ابزارک را حذف کنید؟",
   "home.containers.table.remove.buttons.no": "خیر",
   "home.containers.table.remove.buttons.yes": "بله",
+  "home.cloud.tab.interests": "علاقه مندی",
+  "home.cloud.tab.skills": "مهارت ها",
+  "home.cloud.tab.location": "موقعیت ها",
+
 
   "header.home": "خانه",
   "header.services": "خدمات",
