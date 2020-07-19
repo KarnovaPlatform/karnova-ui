@@ -151,7 +151,7 @@ class WordCloudV3 extends React.Component {
 
     render() {
         let {data, showTooltip, wordCount, width, height, style, className, wordColors} = this.props
-        let {boxSize, render} = this.state
+        let {boxSize, render,words} = this.state
 
         let _wordCount = wordCount < data.length ? wordCount : data.length
         let rotatable = _wordCount > 10 ? 1 : 0
@@ -195,7 +195,7 @@ class WordCloudV3 extends React.Component {
                         wordCount={wordCount}
                         options={options}
                         callbacks={callbacks}
-                        words={data}
+                        words={words}
                     /> }
                 </div>
             </div>

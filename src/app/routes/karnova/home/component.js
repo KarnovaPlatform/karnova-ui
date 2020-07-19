@@ -6,7 +6,7 @@ export default {
         'v1': {
             'component': SectionCloud,
             'url': () => `linkedin/v1/fa/profile/cloud`,
-            'dataKey': 'clouds',
+            'dataKey': 'cloud',
             'method': '_get',
         },
     }
