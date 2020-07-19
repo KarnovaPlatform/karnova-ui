@@ -1,0 +1,39 @@
+.blank-panel {
+    height: 400px;
+    width: 98%;
+    margin: 10px auto;
+    align-items: center;
+    display: flex;
+    box-shadow: 1px 1px 3px #666;
+}
+
+.blank-panel-text {
+    margin: 0 auto;
+}
+.tab-items{
+
+}
+
+.tab-item {
+    min-width: 30px;
+    max-width: 200px;
+    overflow: hidden;
+    height: 35px;
+    border-radius: 12px 12px 0 0;
+    border: 0;
+    box-shadow: 1px 1px 3px #666;
+    background: rgba(31, 66, 90, 0.63);
+    color:white;
+    padding:10px;
+}
+
+.active-tab{
+    color:black;
+    background: white;
+}
+
+.tab-panel {
+    background: white;
+    box-shadow: 1px 1px 3px #666;
+    border-radius: 10px 0 10px 10px;
+}
