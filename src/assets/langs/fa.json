@@ -92,5 +92,13 @@
   "history.month": "ماه",
   "history.year": "سال",
 
+  "table.column.header.index": "ردیف",
+  "table.column.header.image": "تصویر",
+  "table.column.header.text": "متن",
+  "table.column.header.title": "عنوان",
+  "table.column.header.sender": "ارسال کننده",
+  "table.column.header.followers_count": "دنبال کننده گان",
+  "table.title": "پست های اخیر کاربران",
+
   "end": "end"
 }

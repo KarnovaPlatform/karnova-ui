@@ -5,13 +5,12 @@ class Table extends Component {
   _renderThead = ()=>{
     return (
       <tr className='table-head'>
-        <th className="post-index-column">{app.translate('ردیف')}</th>
-        <th >{app.translate('تصویر')}</th>
-        <th><div className="post-text-column">{app.translate('متن')}</div></th>
-        <th className="post-title-column">{app.translate('عنوان')}</th>
-        <th>{app.translate('ارسال کننده')}</th>
-        <th>{app.translate('دنبال کننده گان')}</th>
-        <th>{app.translate('لینک خارجی')}</th>
+        <th className="post-index-column text-center">{app.translate('table.column.header.index')}</th>
+        <th className="text-center" >{app.translate('table.column.header.image')}</th>
+        <th className="text-center"><div className="post-text-column">{app.translate('table.column.header.text')}</div></th>
+        <th className="post-title-column text-center">{app.translate('table.column.header.title')}</th>
+        <th className="text-center">{app.translate('table.column.header.sender')}</th>
+        <th className="text-center">{app.translate('table.column.header.followers_count')}</th>
       </tr>
     )
   }
@@ -24,9 +23,8 @@ class Table extends Component {
           <td><img className="post_image" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyDFxKdsc4KodJFEoQYy86yEM7UtIHuFaI4A&usqp=CAU'} /></td>
           <td className="post-text-column">{post.post.text}</td>
           <td className="post-title-column">{post.post.title}</td>
-          <td>{post.username}</td>
-          <td>{post.followers}</td>
-          <td><button className="btn-default" onClick={()=>{console.log(post.user_id)}}>{app.translate('جزییات')}</button></td>
+          <td className="text-center">{post.username}</td>
+          <td className="text-center">{post.followers}</td>
         </tr>
       )
     })
@@ -37,7 +35,7 @@ class Table extends Component {
   render() {
     return (
       <div className="row table">
-        <h4 id='title' className="table-title">لیست پست ها</h4>
+        <h4 id='title' className="table-title">{app.translate('table.title')}</h4>
         <table id='posts_table' className="table">
           <thead>
           {this._renderThead()}
