@@ -402,6 +402,10 @@ html > body.menu-on-top #main {
     outline: none;
 }
 
+.text-input{
+    align-items: center;
+}
+
 .input-label{
     float: right;
 }
@@ -772,4 +776,8 @@ input[type=submit] {
 .post_image{
     width: 75px;
     height: 40px;
+}
+
+#highlight {
+    direction: ltr;
 }

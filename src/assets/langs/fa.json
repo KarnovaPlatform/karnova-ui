@@ -83,8 +83,8 @@
   "login.confirm_password": "تکرار کلمه عبور",
 
   "search_box.category": "دسته بندی : ",
-  "search_box.skill": "مهارت",
-  "search_box.location": "موقعیت",
+  "search_box.skill": "مهارت : ",
+  "search_box.location": "موقعیت : ",
   "search_box.related_education": "تحصیلات مرتبط :",
   "search_box.search": "جستجو",
 
