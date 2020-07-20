@@ -72,8 +72,8 @@ export default class AutoComplete extends Component {
                 filterType='StartsWith'
                 suggestionCount={100}
                 value={value}
-                // change={(e) => {onChange(e.itemData ? e.itemData.Name : undefined)}}
-                select={(e)=>{e.itemData? onChange(e.itemData.Name) : console.log(e)}}
+                change={(e) => {e.itemData ? onChange(e.itemData.Name ): onChange('')}}
+                // select={(e)=>{e.itemData? onChange(e.itemData.Name) : console.log(e)}}
               />
             </div>
           </div>

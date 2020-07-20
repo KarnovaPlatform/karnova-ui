@@ -20,12 +20,12 @@ class History extends Component {
   }
 
   setMonth = (month)=>{
-    if(parseInt(month) >0 )
+    if(parseInt(month) >=0 )
       this.setState({month} , ()=>this.props.onChange(this.state.year , this.state.month));
   }
 
   setYear = (year)=>{
-    if(parseInt(year)> 0){
+    if(parseInt(year)>= 0){
       this.setState({year} , ()=>this.props.onChange(this.state.year , this.state.month));
     }
   }

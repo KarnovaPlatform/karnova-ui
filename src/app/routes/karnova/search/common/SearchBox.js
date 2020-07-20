@@ -59,7 +59,7 @@ class SearchBox extends Component {
     let lang = 'fa';
     return (
       <div className={'search-box ' + this.props.className}>
-        <form onSubmit={() => {this.props.onClick ? this.props.onClick(this.state) : {}}}>
+        <div >
           <div className="row">
             <div className="col-xl-4 col-lg-4 col-md-3 searchField">
               <Widget
@@ -112,7 +112,7 @@ class SearchBox extends Component {
             <div className="col-xl-3 col-lg-3 col-md-6 educationCheckBoxDiv ">
               <div className="row">
                 <div className="col-xl-10 col-lg-10 col-md-10 time-label ">
-                  <label
+                  <label onClick={()=>{this.setEducationRelated()}}
                     className="col-xl-12 col-lg-12 col-md-12">{app.translate('search_box.related_education')}</label>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-2  ">
@@ -123,12 +123,12 @@ class SearchBox extends Component {
 
             <div className="col-xl-3 col-lg-3 searchboxBtn">
               <div className="search-btn-div ">
-                <button type={'submit'} className="btn-default searchBtn">{app.translate('search_box.search')}</button>
+                <button onClick={() => {this.props.onClick ? this.props.onClick(this.state) : {}}} className="btn-default searchBtn">{app.translate('search_box.search')}</button>
               </div>
             </div>
 
           </div>
-        </form>
+        </div>
 
 
       </div>
