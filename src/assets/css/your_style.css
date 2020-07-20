@@ -781,3 +781,7 @@ input[type=submit] {
 #highlight {
     direction: ltr;
 }
+
+.neo{
+    height:300px
+}

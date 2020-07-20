@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Bio from './detail/Bio'
-import TableV2 from '../table/TableV2'
+import Neo from './../network/Neo'
 
 class PersonDetail extends Component {
 
@@ -11,8 +11,6 @@ class PersonDetail extends Component {
       params:{},
     }
   }
-
-
 
   componentDidMount () {
     this.setState({loading: true}, () => {
@@ -29,12 +27,24 @@ class PersonDetail extends Component {
       return <div>loading...</div>
     let {data} = this.props;
     let profile = data.profile_info;
-    console.log(this.props)
     return (
       <div>
         <div className="row">
-          <Bio id={data._id} fullname={profile.fullname}  headline={profile.headline}  profile_image={profile.profile_image} summery={profile.summery} location={profile.location}/>
-          {/*<TableV2 data={[]}/>*/}
+          <Bio
+            id={data._id}
+            fullname={profile.fullname}
+            headline={profile.headline}
+            profile_image={profile.profile_image}
+            summery={profile.summery}
+            location={profile.location}
+            dossier={data.dossier}
+            loyalty={data.loyalty}
+          />
+        </div>
+        <div className="row pt-3">
+          <div className="col-xl-6 col-lg-6 col-md-12 neo">
+            <Neo onClick={ (node)=>{console.log('node id' , node)}}/>
+          </div>
         </div>
       </div>
     )
