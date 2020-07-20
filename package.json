@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.2.0",
+    "@lifeomic/react-vis-network": "^1.1.0",
     "@syncfusion/ej2-base": "^18.2.44",
     "@syncfusion/ej2-react-dropdowns": "18.2.45",
     "@testing-library/jest-dom": "^4.2.4",
