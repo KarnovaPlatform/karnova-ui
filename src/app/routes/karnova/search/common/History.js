@@ -34,14 +34,14 @@ class History extends Component {
     let {year , month} = this.state;
     return (
       <div className="row pt-3">
-        <div className="col-xl-6 col-lg-6 col-md-6 time-label ">
+        <div className="col-xl-4 col-lg-4 col-md-4 time-label  ">
           <div className=" ">
-            <label className="col-xl-12 col-lg-12 col-md-12" >{app.translate('history.duration')}</label>
+            <label className="col-xl-12 col-lg-12 col-md-12 p-0" >{app.translate('history.duration')}</label>
           </div>
         </div>
-        <div className={"col-xl-6 col-lg-6 col-md-6 "}>
+        <div className={"col-xl-8 col-lg-8 col-md-8 "}>
 
-          <div className="sabeghe">
+          <div className="sabeghe px-0 pl-3">
             <div className="row mx-0">
 
               <div className="col-xl-6 col-lg-6 col-md-6">

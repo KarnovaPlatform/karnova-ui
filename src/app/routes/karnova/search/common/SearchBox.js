@@ -105,25 +105,25 @@ class SearchBox extends Component {
 
           </div>
           <div className="row mx-0">
-            <div className="col-xl-6 col-lg-6">
+            <div className="col-xl-4 col-lg-4">
               <History year={year} month={month} onChange={(year, month) => this.setHistory(year, month)}/>
             </div>
 
-            <div className="col-xl-3 col-lg-3 col-md-6 educationCheckBoxDiv ">
-              <div className="row">
-                <div className="col-xl-10 col-lg-10 col-md-10 time-label ">
+            <div className="col-xl-4 col-lg-4 col-md-6 educationCheckBoxDiv ">
+              <div className="row educationDiv">
+                <div className=" time-label ">
                   <label onClick={()=>{this.setEducationRelated()}}
-                    className="col-xl-12 col-lg-12 col-md-12">{app.translate('search_box.related_education')}</label>
+                    className="">{app.translate('search_box.related_education')}</label>
                 </div>
-                <div className="col-xl-2 col-lg-2 col-md-2  ">
+                <div className="px-3">
                   <input checked={educationRelated} onChange={() => this.setEducationRelated()} type={'checkbox'}/>
                 </div>
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-3 searchboxBtn">
+            <div className="col-xl-4 col-lg-4 searchboxBtn">
               <div className="search-btn-div ">
-                <button onClick={() => {this.props.onClick ? this.props.onClick(this.state) : {}}} className="btn-default searchBtn">{app.translate('search_box.search')}</button>
+                <button onClick={() => {this.props.onClick ? this.props.onClick(this.state) : {}}} className="searchBtn">{app.translate('search_box.search')}</button>
               </div>
             </div>
 

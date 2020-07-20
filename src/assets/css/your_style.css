@@ -410,21 +410,26 @@ html > body.menu-on-top #main {
     float: right;
 }
 
+.search-page-title{
+    padding-top: 30px;
+    text-align: center;
+}
+
 .search-label{
-    font-size: 30px;
-    display: flex;
+    font-size: 20px;
     align-items: center;
     height: 50px;
+
 }
 
 .time-label {
+    padding:0;
     display: flex;
     align-items: center;
     text-align: right;
 }
 
 .sabeghe {
-    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 4px;
     padding: 10px;
     border-radius: 5px;
 }
@@ -526,6 +531,9 @@ html > body.menu-on-top #main {
     padding: 10px 25px;
     border-radius: 5px;
     outline: none;
+    background: #188018;
+    border:none;
+    color:white;
 }
 
 .searchBtn:focus {
@@ -542,6 +550,10 @@ html > body.menu-on-top #main {
 
 .PersonList{
     list-style-type: none;
+}
+
+.educationDiv{
+    margin:auto;
 }
 
 .educationCheckBoxDiv {

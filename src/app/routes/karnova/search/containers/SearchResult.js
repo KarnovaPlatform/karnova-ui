@@ -3,7 +3,6 @@ import SearchBox from '../common/SearchBox'
 import PersonList from '../common/PersonList'
 import { connect } from 'react-redux'
 import { addSearchParams } from '../../home/Module'
-import Pagination2 from '../common/Pagination2'
 
 class SearchResult extends Component {
   constructor (props) {
@@ -80,7 +79,9 @@ class SearchResult extends Component {
     let { searchParams } = this.props
     return (
       <div className="container">
-        <label className="search-label">{app.translate("افراد توانمند در حوزه کسب و کار خود را پیدا کنید ")}</label>
+        <div className="search-page-title">
+          <label className="search-label">{app.translate("افراد توانمند در حوزه کسب و کار خود را پیدا کنید ")}</label>
+        </div>
         <SearchBox className={' mt-3'}
                    category={searchParams.category}
                    skill={searchParams.skill}
