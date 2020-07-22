@@ -34,7 +34,7 @@ class PersonList extends Component {
     })
     return (
       <div className="PersonList">
-        <div className="row">
+        <div className="">
           <label className="finedCount" >{app.translate('تعداد افراد یافته شده : ')}{meta.total} {app.translate(' نفر ')}</label>
         </div>
         {arr && arr.length>0 &&

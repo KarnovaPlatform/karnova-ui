@@ -53,7 +53,7 @@ class ParticleJs extends Component {
         }}
         style={{
           width: '100%',
-          background: `#ffffff`,
+          // background: `#ffffff`,
         }}
       />
     )

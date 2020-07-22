@@ -39,6 +39,14 @@
 
 }
 
+body{
+    /*background: #2d9880*/
+    /*background: #43c3f0*/
+    /*background: rgba(59,175,191,0.45)*/
+    /*background: #ecf0f5;*/
+    background: #f5f5f5;
+}
+
 
 :root {
     --tabel-border-color: #ccc;
@@ -366,14 +374,15 @@ html > body.menu-on-top #main {
 
 
 .myheader{
-    background: #1877bb;
+    /*background: #2e4f5a;*/
+    background: #283e4a;
 }
 
 .header-btn{
     height:40px;
     width:70px;
     color:white;
-    background: #1877bb;
+    background: transparent;
     border:none;
 }
 
@@ -381,8 +390,9 @@ html > body.menu-on-top #main {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 4px;
     padding: 20px;
-    background: white;
-    border-radius: 5px;
+    /*background: darkseagreen;*/
+    background: #efefef;
+    border-radius: 15px;
 }
 
 .searchField {
@@ -413,6 +423,7 @@ html > body.menu-on-top #main {
 .search-page-title{
     padding-top: 30px;
     text-align: center;
+    color:#0075a2;
 }
 
 .search-label{
@@ -457,11 +468,15 @@ html > body.menu-on-top #main {
 }
 
 .person {
-    margin-top: 15px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
+    /*margin-top: 15px;*/
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 1px;
     height: 120px;
     align-items: center;
+}
 
+.person:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+    border-right: 4px solid gray;
 }
 
 .image-avatar {
@@ -531,7 +546,7 @@ html > body.menu-on-top #main {
     padding: 10px 25px;
     border-radius: 5px;
     outline: none;
-    background: #188018;
+    background: darkseagreen;
     border:none;
     color:white;
 }

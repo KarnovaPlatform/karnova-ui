@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HighChartsReact from 'highcharts-react-official'
 import HighCharts from 'highcharts'
+import avatar from './../../../../../../assets/img/userAvatar.png'
 
 const options = ({labels, imgs, followers, ids, links, HighCharts} , max) => {
   let options = {
@@ -28,9 +29,9 @@ const options = ({labels, imgs, followers, ids, links, HighCharts} , max) => {
         crop: false,
         // format: '<a  href="https://www.google.com/?q" ><img src="./public/img/{series[4].img[{x}]}.jpg" style=" width:5em ; height:5em  ; border-radius: 50% ; box-shadow: rgba(0 , 0 , 0 ,0.9)  0 0 10px;" alt="{total}"  /></a>' ,
         formatter: function () {
-          let imgsAddress = imgs[this.x]
+          // let imgsAddress = imgs[this.x]
           let link = links[this.x]
-          return '<a  href=' + link + ' target="_blank"><img src=' + imgsAddress + ' style=" width:5em ; height:5em  ; border-radius: 50% ; box-shadow: rgba(0 , 0 , 0 ,0.9)  0 0 10px;"  /></a>'
+          return '<a  href=' + link + ' target="_blank"><img src=' + avatar + ' style=" width:5em ; height:5em  ; border-radius: 50% ; box-shadow: rgba(0 , 0 , 0 ,0.9)  0 0 10px;"  /></a>'
         },
         rotation: '0',
         useHTML: 'true',
