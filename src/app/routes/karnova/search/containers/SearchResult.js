@@ -80,7 +80,7 @@ class SearchResult extends Component {
     return (
       <div className="container">
         <div className="search-page-title">
-          <label className="search-label">{app.translate("افراد توانمند در حوزه کسب و کار خود را پیدا کنید ")}</label>
+          <label className="search-label">{app.translate("نتایج جستجو")}</label>
         </div>
         <SearchBox className={' mt-3'}
                    category={searchParams.category}

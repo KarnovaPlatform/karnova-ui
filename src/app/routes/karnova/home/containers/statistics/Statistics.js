@@ -7,7 +7,7 @@ class Statistics extends Component {
     return (
         <div className="particleJsDiv">
           <ParticleJs/>
-          {/*<Title/>*/}
+          <Title/>
         </div>
     )
   }
