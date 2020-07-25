@@ -5,8 +5,7 @@ dist/
 node_modules/
 package-lock.json
 /prettierrc.json
-/src/assets/img/
-
+/src/app/config/api.js
 
 
 # testing

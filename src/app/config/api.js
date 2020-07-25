@@ -18,7 +18,7 @@ const allConfig = {
         localDateTime: true,
         dateFormat: 'jYYYY-jMM-jDD',
         dateTimeFormat: 'jYYYY-jMM-jDD HH:mm:ss',
-        mode: "dev" // test | dev | prod
+        mode: "test" // test | dev | prod
     },
 };
 
