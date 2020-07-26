@@ -8,7 +8,7 @@ class Detail extends Component {
     let person_id = this.props.params.id
     return (
       <div className="content">
-        <div className="container">
+        <div className="container p-0">
           <Widget
             componentKey={`linkedin.${lang}.person.profile.getById`}
             lang={lang}
