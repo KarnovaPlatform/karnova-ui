@@ -376,6 +376,9 @@ html > body.menu-on-top #main {
 .myheader{
     /*background: #2e4f5a;*/
     background: #283e4a;
+    position: fixed;
+    width:100%;
+    z-index: 100;
 }
 
 .header-btn{
@@ -384,6 +387,10 @@ html > body.menu-on-top #main {
     color:white;
     background: transparent;
     border:none;
+}
+
+.content{
+    padding-top: 40px;
 }
 
 .search-box {

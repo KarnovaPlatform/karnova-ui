@@ -5,15 +5,17 @@ import Widget from '../../../../widgets/Widget'
 
 class Search extends Component {
   render () {
-    let lang = 'fa';
+    let lang = 'fa'
     return (
-      <div className="container">
-        <Widget
-          componentKey={`linkedin.${lang}.person.profile.search`}
-          componentDependencies={{
-            "router":this.props.router
-          }}
-        />
+      <div className="content">
+        <div className="container">
+          <Widget
+            componentKey={`linkedin.${lang}.person.profile.search`}
+            componentDependencies={{
+              'router': this.props.router
+            }}
+          />
+        </div>
       </div>
     )
   }
