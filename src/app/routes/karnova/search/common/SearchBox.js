@@ -47,7 +47,7 @@ class SearchBox extends Component {
   }
 
   setHistory = (year, month) => {
-    this.setState({ year, month })
+    this.setState({ year: year==="0" ? undefined: year , month: month==="0" ? undefined: month })
   }
 
   setEducationRelated = () => {
