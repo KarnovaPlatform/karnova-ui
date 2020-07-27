@@ -30,7 +30,15 @@ class PersonDetail extends Component {
     if (this.state.loading)
       return <div>loading...</div>
     let { data } = this.props
-    let profile = data.profile_info
+    let profile = undefined;
+    if(data)
+    {
+      profile = data.profile_info
+    }else {
+      return <div className="">
+        شخصی با اطلاعات مورد نظر یافت نشد
+      </div>
+    }
 
     let articles = []
     if (data.articles)
@@ -49,20 +57,27 @@ class PersonDetail extends Component {
       })
 
     let posts = []
-    if(data.posts )
+    if (data.posts)
       data.posts.post_data.map((post, index) => {
         posts.push(
           <div className="col-xl-6 col-lg-6" key={index}>
             <div className="post-div">
               <div className="row">
-                <div className="col-xl-10 col-lg-9">
-                  <label className="col-12 post-title">{post.title === '0' ? <label className="red-warning">no
-                    title</label> : post.title}</label>
-                  {`${post.likes} Reactions  ${post.comments} Comments`}
-                </div>
+
                 <div className="col-xl-2 col-lg-3">
                   <img className="post-image" src={noPostImage}/>
                 </div>
+
+                <div className="col-xl-10 col-lg-9 post-detail">
+                  <label className="col-12 post-title">
+                    {post.title === '0' ?
+                    <label className="red-warning">بدون عنوان </label>
+                      : post.title
+                    }
+                  </label>
+                  <p className="post-detail-info">{`  لایک ها ${post.likes}  -  نظرات   ${post.comments}`}</p>
+                </div>
+
               </div>
             </div>
           </div>
@@ -70,13 +85,17 @@ class PersonDetail extends Component {
       })
 
     let experiences = []
-    if(data.experiences)
+    if (data.experiences)
       data.experiences.map((experience, index) => {
         experiences.push(
           <div className="col-12" key={index}>
             <div className="experience-div">
               <div className="row">
-                <div className="col-xl-11 col-lg-11">
+                <div className="col-xl-1 col-lg-1">
+                  <img className="experience-image" src={noPostImage}/>
+                </div>
+
+                <div className="col-xl-11 col-lg-11 experience-detail">
                   <label className="col-12 experience-title">{experience.title === '0' ? <label className="red-warning">no
                     title</label> : experience.title}</label>
                   <label
@@ -85,9 +104,10 @@ class PersonDetail extends Component {
                     {` ${experience.how_long === '0' ? '' : experience.how_long} . ${experience.duration === '0' ? '' : experience.duration}`}
                   </div>
                 </div>
-                <div className="col-xl-1 col-lg-1">
-                  <img className="experience-image" src={noPostImage}/>
+                <div className="col-xl-1 col-lg-1 ">
+
                 </div>
+
                 <div className="col-xl-11 col-lg-11">
                   <div className="line"/>
                 </div>
@@ -103,21 +123,28 @@ class PersonDetail extends Component {
         <div className="col-12" key={index}>
           <div className="experience-div">
             <div className="row">
-              <div className="col-xl-11 col-lg-11">
+
+              <div className="col-xl-1 col-lg-1">
+                <a href={education.href}>
+                  <img className="experience-image education-image" src={noPostImage}/>
+                </a>
+              </div>
+              <div className="col-xl-11 col-lg-11 education-detail">
                 <label className="col-12 experience-title">{education.name === '0' ? <label className="red-warning">no
                   name</label> : education.name}</label>
                 <div className="col-12">
                   {` ${education.how_long === '0' ? '' : education.how_long} `}
                 </div>
               </div>
+
               <div className="col-xl-1 col-lg-1">
-                <a href={education.href}>
-                  <img className="experience-image education-image" src={noPostImage}/>
-                </a>
+
               </div>
+
               <div className="col-xl-11 col-lg-11">
                 <div className="line"/>
               </div>
+
             </div>
           </div>
         </div>
@@ -125,23 +152,30 @@ class PersonDetail extends Component {
     })
 
     let skills = []
-    if(data.skills_endorsements)
-      data.skills_endorsements.map((skill , index)=>{
+    if (data.skills_endorsements)
+      data.skills_endorsements.map((skill, index) => {
         skills.push(
-            <div className="col-xl-12 col-lg-12" key={index}>
-              <div className="experience-div">
-                <div className="row">
-                  <div className="col-xl-10 col-lg-10">
-                    <label>{skill.approved}</label>
-                  </div>
-                  <div className="col-xl-2 col-lg-2">
-                    <label className="col-12 experience-title pointer">{skill.skill === '0' ? <label
-                      className="red-warning">no name</label> : skill.skill}</label>
-                  </div>
+          <div className="col-xl-12 col-lg-12" key={index}>
+            <div className="experience-div">
+              <div className="row">
 
+                <div className="col-xl-2 col-lg-2 skill-div">
+                  <label className="col-12 experience-title pointer">{skill.skill === '0' ? <label
+                    className="red-warning">no name</label> : skill.skill}</label>
                 </div>
+
+                <div className="col-xl-10 col-lg-10 approved">
+                  <label>{skill.approved}</label>
+                </div>
+
+
+                <div className="col-12">
+                  <div className="line"/>
+                </div>
+
               </div>
             </div>
+          </div>
         )
       })
 
@@ -151,19 +185,21 @@ class PersonDetail extends Component {
         <div className="col-xl-6 col-lg-6" key={index}>
           <div className="experience-div">
             <div className="row">
-              <div className="col-xl-10 col-lg-10">
+
+              <div className="col-xl-2 col-lg-2">
+                <a href={interest.link}>
+                  <img className=" interest-image" src={avatar}/>
+                </a>
+              </div>
+
+              <div className="col-xl-10 col-lg-10 interest-detail">
                 <a href={interest.link}>
                   <label className="col-12 experience-title pointer">{interest.title === '0' ? <label
                     className="red-warning">no name</label> : interest.title}</label>
                 </a>
                 <div className="col-12 ltrdir">
-                  {`${interest.follower} followers`}
+                  {` دنبال کننده : ${interest.follower} نفر `}
                 </div>
-              </div>
-              <div className="col-xl-2 col-lg-2">
-                <a href={interest.link}>
-                  <img className=" interest-image" src={avatar}/>
-                </a>
               </div>
 
             </div>
@@ -172,7 +208,11 @@ class PersonDetail extends Component {
       )
     })
 
-    
+    let accomplishments = [];
+    if(data.accomplishments){
+      // ober mbad karbom slide mvp talent accelator
+    }
+
     return (
       <div>
 
@@ -242,10 +282,30 @@ class PersonDetail extends Component {
         </div>
         }
 
-        {data.skills_endorsements &&
+        {data.skills_endorsements && data.skills_endorsements.length > 0 &&
         <div className="experiences-div">
           <label className="col-12 p-3 article-div-title">{app.translate('مهارت ها : ')}</label>
           <div className="row p-3">
+            <div className="col-xl-12 col-lg-12" key={-1}>
+              <div className="experience-div">
+                <div className="row">
+
+                  <div className="col-xl-2 col-lg-2 skill-div">
+                    <label className="col-12 experience-title pointer">{app.translate('عنوان مهارت ')}</label>
+                  </div>
+
+                  <div className="col-xl-10 col-lg-10 approved">
+                    <label>{app.translate('تعداد تایید کننده')}</label>
+                  </div>
+
+
+                  <div className="col-12">
+                    <div className="line"/>
+                  </div>
+
+                </div>
+              </div>
+            </div>
             {skills[0]}
             {skills[1]}
             {skills[2]}

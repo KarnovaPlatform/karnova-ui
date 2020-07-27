@@ -20,16 +20,6 @@ class Bio extends Component {
           <div className="person-image-div">
             <img className="col-12 person_bio_image p-0" src={avatar}/>
             <div className="row">
-              <div className="col-xl-4 col-lg-4 ">
-                <div className="person-detail">
-                  <label className="col-12 person-detail-label">{experience}</label>
-                  {/*<label className="col-xl-3 person-detail-label">{'تحصیلات :'}</label>*/}
-                  <label className="col-12 person-detail-label">{degree}</label>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 ">
-
-              </div>
 
               <div className="col-xl-4 col-lg-4 ">
                 <div className="person-detail">
@@ -39,6 +29,21 @@ class Bio extends Component {
                   <label className="col-12 person-detail-label" >site: <a href={site}>{site}</a></label>
                 </div>
               </div>
+
+              <div className="col-xl-4 col-lg-4 ">
+
+              </div>
+
+              <div className="col-xl-4 col-lg-4 ">
+                <div className="person-detail">
+                  <label className="col-12 person-detail-label">{experience}</label>
+                  {/*<label className="col-xl-3 person-detail-label">{'تحصیلات :'}</label>*/}
+                  <label className="col-12 person-detail-label">{degree}</label>
+                </div>
+              </div>
+
+
+
 
 
             </div>
