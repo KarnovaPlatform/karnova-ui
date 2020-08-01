@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Bio from './detail/Bio'
 import Neo from './../network/Neo'
-import AreaMap from './../../components/diagram/area/AreaMap'
+// import AreaMap from './../../components/diagram/area/AreaMap'
 import avatar from './../../../assets/img/userAvatar.png'
 import noImage from './../../../assets/img/No_image.png'
 import noPostImage from './../../../assets/img/no-post-image.png'
