@@ -5,13 +5,17 @@ import avatar from '../../../assets/img/userAvatar.png'
 
 class Person extends Component {
 
+  preventDragHandler = (e)=>{
+    e.preventDefault();
+  }
+
   render () {
     let { name, family, id, image, skill, location, year , linkedinUrl , loyalty , baseUrl } = this.props
     return (
       <div className="row person mx-0">
         <div className="col-xl-1 col-lg-3 col-md-3 ">
           <a href={baseUrl+id}>
-            <img className="image-avatar" src={avatar}   />
+            <img className="image-avatar" src={avatar} onDragStart={this.preventDragHandler}  />
           </a>
         </div>
 
