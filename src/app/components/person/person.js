@@ -6,11 +6,13 @@ import avatar from '../../../assets/img/userAvatar.png'
 class Person extends Component {
 
   render () {
-    let { name, family, id, image, skill, location, year , linkedinUrl , loyalty } = this.props
+    let { name, family, id, image, skill, location, year , linkedinUrl , loyalty , baseUrl } = this.props
     return (
       <div className="row person mx-0">
         <div className="col-xl-1 col-lg-3 col-md-3 ">
-          <img className="image-avatar" src={avatar}  onClick={()=>{this.props.onClick(id)}} />
+          <a href={baseUrl+id}>
+            <img className="image-avatar" src={avatar}   />
+          </a>
         </div>
 
         <div className="col-xl-9 col-lg-6 col-md-6 text-right">

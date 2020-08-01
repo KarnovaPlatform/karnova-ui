@@ -21,12 +21,13 @@ class PersonList extends Component {
       historyLabel+= month && month>0 ? month + ' ' + app.translate('ماه') + ' ': ''
       arr.push(<li key={index}>
         <Person id={person._id}
+                baseUrl={'/#/person/'}
                 name={profile.fullname}
                 family={''} image={profile.profile_image}
                 skill={profile.headline}
                 location={profile.location}
                 onClick={(id) => this.props.router.push(`/person/${id}`)}
-                linkedinUrl={profile.url}
+                linkedinUrl={person.link}
                 year={historyLabel}
                 loyalty={(person.loyalty *100).toFixed(0)}
         />
