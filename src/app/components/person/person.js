@@ -10,7 +10,7 @@ class Person extends Component {
   }
 
   render () {
-    let { name, family, id, image, skill, location, year , linkedinUrl , loyalty , baseUrl } = this.props
+    let { name, family, id, image, skill, location, year , linkedinUrl , loyalty , baseUrl ,experienceCount} = this.props
     return (
       <div className="row person mx-0">
         <div className="col-xl-1 col-lg-3 col-md-3 ">
@@ -37,7 +37,7 @@ class Person extends Component {
                 </div>
                 <div className="col-xl-3 col-lg-3 col-md-3 flexDisplay">
                   <p className="historyLabel">{app.translate(' سابقه : ')}</p>
-                  {' ' + year}
+                  {' ' + year && year.length>0? year +'در '+ experienceCount +' شرکت' : app.translate('ندارد')}
                 </div>
 
                 {linkedinUrl && <a href={linkedinUrl} >{app.translate('پروفایل لینکدین')}</a>}

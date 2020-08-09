@@ -30,6 +30,7 @@ class PersonList extends Component {
                 linkedinUrl={person.link}
                 year={historyLabel}
                 loyalty={(person.loyalty *100).toFixed(0)}
+                experienceCount={person && person.experiences ? person.experiences.length : ''}
         />
       </li>)
     })

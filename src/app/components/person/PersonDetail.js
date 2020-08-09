@@ -41,7 +41,7 @@ class PersonDetail extends Component {
       profile = data.profile_info
     }else {
       return <div className="">
-        شخصی با اطلاعات مورد نظر یافت نشد
+        {app.translate('شخصی با اطلاعات مورد نظر یافت نشد')}
       </div>
     }
 
