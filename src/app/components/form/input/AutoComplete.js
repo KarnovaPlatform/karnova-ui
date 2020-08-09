@@ -66,7 +66,7 @@ export default class AutoComplete extends Component {
                 dataSource={loading ? undefined :  data }
                 ignoreCate={!loading}
                 fields={{ value: 'Name' }}
-                placeholder={placeholder}
+                placeholder={loading? 'loading...':placeholder}
                 highlight={true}
                 autofill={true}
                 filterType='StartsWith'
