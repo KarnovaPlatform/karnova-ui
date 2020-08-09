@@ -68,7 +68,11 @@ class Login extends Component {
   render () {
     let { active, username, password, loading } = this.state
     if(loading){
-      return <div>loading</div>
+      return (
+        <div id="preloader" className="container">
+          <div id="loader"/>
+        </div>
+      )
     }
     return (
       <div className="login">
@@ -104,7 +108,7 @@ class Login extends Component {
 
           <form>
             <div className={active ? 'fab active' : 'fab'}>
-              <i className={active ? 'fa fa-window-close' : 'fas fa-user-plus'}
+              <i className={active ? 'fa fa-window-close' : 'fa fa-user-plus'}
                  onClick={() => {
                    this.setState({ active: !active })
                  }}

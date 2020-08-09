@@ -28,7 +28,12 @@ class PersonDetail extends Component {
 
   render () {
     if (this.state.loading)
-      return <div>loading...</div>
+      return (
+        <div id="preloader" className="container">
+          <div id="loader"/>
+        </div>
+      )
+
     let { data } = this.props
     let profile = undefined;
     if(data)
