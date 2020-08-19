@@ -250,6 +250,7 @@ class PersonDetail extends Component {
           <div className="row p-3">
             {articles[0] && articles[0]}
             {articles.length > 1 && articles[1] && articles[1]}
+            {articles.length>2? 'بیشتر ' : ''}
           </div>
         </div>
         }
@@ -319,7 +320,7 @@ class PersonDetail extends Component {
         </div>
         }
 
-        {data.interests &&
+        {data.interests && data.interests.length>0 &&
         <div className="posts-div">
           <label className="col-12 p-3 article-div-title">{app.translate('علاقه مندی ها : ')}</label>
           <div className="row p-3">
